@@ -1,0 +1,32 @@
+﻿@model Productos.Models.ViewModel.ProductoVM
+@{
+    ViewData["Title"] = "ProductosCategoria";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using(Html.BeginForm("ProductosCategoria","Home",FormMethod.Post,new {@id="formulario"}))
+{
+    <div>
+        <select>
+            @foreach(var item in Model.categorias)
+            {
+                <option value="@item.CodigoCategoria">@item.NombreCategoria</option>
+            }
+        </select>
+        <button type="submit">Buscar productos</button>
+    </div>
+}
+<br />
+<br />
+<table>
+    <tr>
+        <td>Producto</td>
+    </tr>
+    @foreach (var item in Model.listaProductos)
+    {
+        <tr>
+            <td>@item.Nombre</td>
+        </tr>
+    }
+    <tr></tr>
+</table>
