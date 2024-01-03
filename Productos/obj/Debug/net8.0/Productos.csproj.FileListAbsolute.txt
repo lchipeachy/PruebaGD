@@ -252,3 +252,4 @@ C:\Users\Lucia\Desktop\Productos\Productos\bin\Debug\net8.0\runtimes\win\lib\net
 C:\Users\Lucia\Desktop\Productos\Productos\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\Lucia\Desktop\Productos\Productos\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Lucia\Desktop\Productos\Productos\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\Lucia\Desktop\Productos\Productos\obj\Debug\net8.0\Productos.sourcelink.json

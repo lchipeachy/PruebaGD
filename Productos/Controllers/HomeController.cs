@@ -39,6 +39,12 @@ namespace Productos.Controllers
             ProductoVM productos = new ProductoVM();
             productos.categorias = _DBContext.Categoria.Select(c => new CategoriaList { CodigoCategoria = c.CodigoCategoria, NombreCategoria = c.Nombre }).ToList();
             productos.listaProductos = _DBContext.Productos.Where(p => p.CodigoCategoria == CodigoCategoria).ToList();
+
+            var ventas2019 = (from Producto in _DBContext.Productos
+                              join venta in _DBContext.Venta on Producto.CodigoProducto equals venta.CodigoProducto
+                              where Producto.CodigoCategoria == CodigoCategoria
+                              && venta.Fecha.Year == 2019
+                              select Producto).ToList();
             return View(productos);
         }
     }
